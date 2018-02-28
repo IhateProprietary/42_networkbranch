@@ -1,0 +1,5 @@
+docker run -dt --rm --name Abathur --mount "type=bind,source=$HOME/test,target=/app" -p 3000:3000 python:2-slim
+docker exec Abathur python -m ensurepip --default-pip
+docker exec Abathur pip install flask
+docker exec Abathur bash -c "echo -e 'from flask import Flask\napp = Flask(__name__)\n\n@app.route(\"/\")\ndef hello():\n\treturn \"<h1>Hello World</h1>\"' > /app/app.py"
+docker exec -e FLASK_APP=/app/app.py Abathur flask run --port 3000 --host $(docker inspect -f '{{ .NetworkSettings.IPAddress }}' Abathur)

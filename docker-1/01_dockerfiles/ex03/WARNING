@@ -1,0 +1,9 @@
+GUIDE on gitlab is good enough
+basically follow it.
+
+but you have to
+
+every service has to be restarted
+PASSWORD FOR POSTGRESQL must be set
+ruby is not enough, ruby-dev must be installed
+fucking redis-server is shit
