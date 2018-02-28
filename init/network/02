@@ -1,0 +1,1 @@
+ifconfig | grep -v inet6 | grep inet | awk '{if ($2 != "127.0.0.1") print $2}'

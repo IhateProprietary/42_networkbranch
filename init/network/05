@@ -1,0 +1,1 @@
+nslookup slash16.org | grep Server: | sed 's/Server://g' | tr -d ' 	'
