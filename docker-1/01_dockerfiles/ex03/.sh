@@ -85,7 +85,6 @@ sudo -u git -H bundle exec rake gitlab:env:info RAILS_ENV=production
 sudo -u git -H bundle exec rake gettext:compile RAILS_ENV=production
 sudo -u git -H yarn install --production --pure-lockfile
 sudo -u git -H bundle exec rake gitlab:assets:compile RAILS_ENV=production NODE_ENV=production
-sudo /etc/init.d/gitlab restart
 sudo apt-get install -y nginx
 echo '## GitLab
 ##
