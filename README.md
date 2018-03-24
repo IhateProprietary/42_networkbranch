@@ -1,0 +1,1 @@
+This repo contains all 42 "sys admin" project. Since it is mostly bash and command I regrouped all of it here.
